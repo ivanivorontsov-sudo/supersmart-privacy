@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Политика конфиденциальности — конвертер единиц и валют</title>
+<meta name="description" content="Информация об обработке данных интерактивным конвертером единиц измерения и валют Ивана Воронцова.">
+<link rel="canonical" href="https://ivanivorontsov-sudo.github.io/supersmart-privacy/edinicy.html">
+<style>
+:root{color-scheme:light dark;--bg:#fbf6ef;--fg:#2b211a;--mut:#75665a;--card:#fffaf4;--bd:rgba(120,80,40,.18);--acc:#bd5c2b}
+@media(prefers-color-scheme:dark){:root{--bg:#1c1714;--fg:#f3e9df;--mut:#bba999;--card:#2c241f;--bd:rgba(255,200,150,.16);--acc:#f08a4b}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}.wrap{max-width:850px;margin:auto;padding:28px 18px 60px}
+h1{font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.15}h2{font-size:1.2rem;margin-top:2em}
+p,li{overflow-wrap:anywhere}.muted{color:var(--mut)}.note{padding:18px;border:1px solid var(--bd);border-left:4px solid var(--acc);border-radius:14px;background:var(--card)}
+a{color:var(--acc)}footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--bd);color:var(--mut)}
+</style></head>
+<body><main class="wrap">
+<p><a href="index.html">← Все политики конфиденциальности</a></p>
+<h1>Политика конфиденциальности сайта «Интерактивный конвертер единиц и валют»</h1>
+<p class="muted">Последнее обновление: 9 ноября 2026 года</p>
+<div class="note"><strong>Кратко:</strong> сайт не требует регистрации, не содержит формы отправки персональных данных и не создаёт собственную учётную запись посетителя. Расчёты единиц выполняются в браузере. Для валют запрашивается справочная таблица курсов у внешнего API; введённая сумма не отправляется этому API.</div>
+
+<h2>1. Какие данные обрабатывает сам сайт</h2>
+<p>Сайт не просит имя, адрес электронной почты, телефон или другие идентифицирующие сведения. На сайте нет регистрации, пользовательских профилей, аналитических счётчиков, рекламных трекеров и cookie-файлов, устанавливаемых владельцем сайта. Введённые значения и выбранные единицы используются кодом страницы только для расчёта результата в браузере. Сайт не сохраняет значения вычислений на сервере и не передаёт их владельцу сайта.</p>
+
+<h2>2. Конвертация валют и внешний API</h2>
+<p>Для получения справочных валютных курсов браузер обращается к открытому сервису <a href="https://www.exchangerate-api.com/" rel="noopener noreferrer">ExchangeRate-API</a>. В запросе указывается код исходной валюты (например, RUB или USD), чтобы загрузить таблицу курсов для этой валюты.</p>
+<p>Сумма, введённая посетителем, выбранная целевая валюта и результат вычисления обрабатываются в браузере и не включаются в запрос к API. Внешний оператор может самостоятельно получать технические сведения, необходимые для обработки сетевого запроса, например IP-адрес, время обращения и технические параметры соединения. Эта обработка регулируется документами самого сервиса: <a href="https://www.exchangerate-api.com/terms" rel="noopener noreferrer">условия использования</a> и <a href="https://www.exchangerate-api.com/docs/free" rel="noopener noreferrer">описание открытого API</a>.</p>
+<p>Владелец сайта не управляет инфраструктурой ExchangeRate-API и не получает от него журналы запросов или иные данные посетителей.</p>
+
+<h2>3. Точность курсов</h2>
+<p>Курсы предоставляются внешним поставщиком и обновляются им примерно раз в сутки. Они носят справочный характер и могут отличаться от курса банка, платёжной карты или обменника. Перед финансовой операцией посетителю следует проверять итоговый курс и комиссии непосредственно у своего поставщика услуги.</p>
+
+<h2>4. Хостинг</h2>
+<p>Сайт размещён на GitHub Pages. GitHub как поставщик хостинга может самостоятельно обрабатывать техническую информацию о запросах к своим сервисам в соответствии со своей <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">политикой конфиденциальности</a>. Это не означает, что владелец сайта создаёт собственную базу посетителей или получает журналы GitHub.</p>
+
+<h2>5. Контакты и изменения</h2>
+<p>По вопросам о настоящем документе можно написать на <a href="mailto:ivanivorontsov@gmail.com">ivanivorontsov@gmail.com</a>. Политика может обновляться при изменении функций сайта или используемых внешних сервисов; актуальная версия публикуется на этой странице.</p>
+
+<footer><p><a href="https://ivanivorontsov-sudo.github.io/edinicy/">Открыть конвертер единиц и валют</a> · <a href="index.html">Все политики</a> · <a href="https://ivanivorontsov-sudo.github.io/">Главный сайт</a></p></footer>
+</main></body></html>
