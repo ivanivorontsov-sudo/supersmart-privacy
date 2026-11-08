@@ -670,6 +670,20 @@ footer{margin-top:35px;padding-top:18px;border-top:1px solid var(--bd);font-size
 <p>Зашифрованные PDF не поддерживаются. Пересохранение документа делает существующие цифровые подписи недействительными; интерактивные формы, закладки, вложения и сложные аннотации могут не сохраниться. Очистка метаданных удаляет стандартные поля документа и XMP-пакет, если он доступен, но не очищает текст и изображения внутри страниц, историю правок или скрытое содержимое.</p>
 <div class="entry-links"><a href="https://ivanivorontsov-sudo.github.io/pdf-master/">Открыть PDF Мастер</a> · <a href="https://github.com/ivanivorontsov-sudo/ivanivorontsov-sudo.github.io/tree/main/pdf-master">Репозиторий и исходный код</a> · <a href="https://ivanivorontsov-sudo.github.io/pdf-master/privacy.html">Отдельная политика конфиденциальности</a></div>
 </section>
+<section class="policy-entry" id="daily-tools" data-search="ежедневная мастерская daily tools diff хеш файла sha256 дубликаты exif фото csv json markdown url wcag">
+<div class="entry-head"><span class="tag">Веб</span><span class="status">Функции описаны в документации проекта</span></div>
+<h2>Ежедневная мастерская</h2>
+<p class="summary">Набор из одиннадцати локальных инструментов для текстов, файлов, фотографий, таблиц и веб-адресов.</p>
+<h3>Какие сведения обрабатываются</h3>
+<p>В зависимости от инструмента пользователь может вводить тексты, URL, цвета, CSV/JSON-данные или выбирать файлы для хеширования, поиска дубликатов и обработки изображений. Эти значения используются в текущей вкладке браузера для запрошенной операции и не отправляются на сервер владельца сайта.</p>
+<h3>Хранение и удаление</h3>
+<p>Файлы читаются через File API, изображения обрабатываются через createImageBitmap и Canvas API, контрольные суммы вычисляются через Web Crypto API. Файлы, тексты и результаты не сохраняются в аккаунт или на сервер; после закрытия/перезагрузки вкладки рабочие данные исчезают. В localStorage сохраняется только выбранная цветовая тема.</p>
+<h3>Сетевые обращения и сторонние сервисы</h3>
+<p>Страница не загружает сторонние библиотеки, рекламные SDK, аналитику или API. Все операции выполняются встроенными браузерными API. GitHub Pages как хостинг может самостоятельно обрабатывать технические сведения о запросах (например, IP-адрес, время и параметры браузера) по своей политике.</p>
+<h3>Ограничения</h3>
+<p>Очистка EXIF повторно кодирует пиксели изображения, но не скрывает сведения, видимые на самом снимке; GIF-анимация может стать статичной. Целевой размер сжатого изображения не гарантирован для всех файлов. SHA-256/512 не является проверкой безопасности файла. Сравнение текстов выполняется построчно; при больших объёмах применяется упрощённый режим. Предпросмотр Markdown экранирует исходный HTML.</p>
+<div class="entry-links"><a href="https://ivanivorontsov-sudo.github.io/daily-tools/">Открыть Ежедневную мастерскую</a> · <a href="https://github.com/ivanivorontsov-sudo/ivanivorontsov-sudo.github.io/tree/main/daily-tools">Исходный код</a> · <a href="https://ivanivorontsov-sudo.github.io/daily-tools/privacy.html">Отдельная политика конфиденциальности</a></div>
+</section>
 <footer><p>Вопросы по документам: <a href="mailto:ivanivorontsov@gmail.com">ivanivorontsov@gmail.com</a>.</p><p><a href="index.html">Каталог политик</a> · <a href="https://ivanivorontsov-sudo.github.io/">Главный сайт</a> · <a href="https://ivanivorontsov-sudo.github.io/vizitka/">Визитка</a></p><p>© 2026 Иван Воронцов.</p></footer>
 </main><script>
 const input=document.getElementById("search"),entries=[...document.querySelectorAll(".policy-entry")],count=document.getElementById("count");
