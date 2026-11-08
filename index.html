@@ -1,46 +1,116 @@
 <!doctype html>
-<html lang="ru">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<title>Политики конфиденциальности — проекты Ивана Воронцова</title>
-<meta name="description" content="Единый каталог опубликованных политик конфиденциальности приложений, программ и веб-инструментов Ивана Воронцова.">
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>Политики конфиденциальности — продукты Ивана Воронцова</title>
+<meta name="description" content="Каталог политик конфиденциальности и сведений об обработке данных для 64 продуктов Ивана Воронцова и отдельных приложений.">
 <link rel="canonical" href="https://ivanivorontsov-sudo.github.io/supersmart-privacy/">
 <style>
 :root{color-scheme:light dark;--bg:#fbf6ef;--fg:#2b211a;--mut:#75665a;--card:#fffaf4;--bd:rgba(120,80,40,.18);--acc:#bd5c2b;--acc2:#e3a04b}
 @media(prefers-color-scheme:dark){:root{--bg:#1c1714;--fg:#f3e9df;--mut:#bba999;--card:#2c241f;--bd:rgba(255,200,150,.16);--acc:#f08a4b;--acc2:#f4b860}}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(55rem 28rem at 0 0,#f6e2cc 0,transparent 70%),var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
-main{max-width:860px;margin:auto;padding:clamp(20px,5vw,52px) 18px 56px}
-h1{font-size:clamp(2rem,6vw,3rem);line-height:1.1;letter-spacing:-.03em;margin:.3em 0 .6em}
-.lead{color:var(--mut);max-width:70ch}
-.policy-list{list-style:none;margin:24px 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.policy-list li{min-width:0;border:1px solid var(--bd);border-radius:16px;background:var(--card);box-shadow:0 8px 24px rgba(70,45,22,.06);overflow:hidden}
-.policy-list a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 18px;color:var(--fg);font-weight:650;text-decoration:none}
-.policy-list a:hover{color:var(--acc);background:color-mix(in srgb,var(--acc) 7%,var(--card))}
-.policy-list a span{color:var(--acc);font-size:1.2rem}
-.note{margin-top:24px;padding:18px 20px;border:1px solid var(--bd);border-left:4px solid var(--acc);border-radius:16px;background:var(--card)}
-.note p{margin:6px 0;color:var(--mut)}
-footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--bd);color:var(--mut);font-size:.9rem}
-a{color:var(--acc)}
-@media(max-width:560px){.policy-list{grid-template-columns:1fr}main{padding-inline:14px}}
-</style>
-</head>
-<body><main>
+main{max-width:1000px;margin:auto;padding:clamp(20px,5vw,52px) 18px 56px}h1{font-size:clamp(2rem,6vw,3rem);line-height:1.1;letter-spacing:-.03em;margin:.3em 0 .6em}
+.lead{color:var(--mut);max-width:76ch}.notice{margin:20px 0;padding:16px 18px;border:1px solid var(--bd);border-left:4px solid var(--acc);border-radius:16px;background:var(--card)}
+.search{width:100%;padding:13px 15px;border:1px solid var(--bd);border-radius:13px;background:var(--card);color:var(--fg);font:inherit;margin:16px 0}
+.filters{display:flex;flex-wrap:wrap;gap:7px;margin:6px 0 14px}.filters button{border:1px solid var(--bd);background:var(--card);color:var(--fg);border-radius:999px;padding:7px 12px;font:inherit;cursor:pointer}.filters button[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:white}
+.policy-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.policy-card,.legacy-card{display:flex;flex-direction:column;gap:3px;min-width:0;padding:13px 15px;border:1px solid var(--bd);border-radius:14px;background:var(--card);color:var(--fg);text-decoration:none}
+.policy-card:hover,.legacy-card:hover{border-color:var(--acc);color:var(--acc)}.policy-card strong{font-size:.98rem;overflow-wrap:anywhere}.policy-card span{font-size:.8rem;color:var(--mut)}
+.legacy-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+h2{font-size:1.35rem;margin:30px 0 12px}.muted{color:var(--mut);font-size:.9rem}
+footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--bd);color:var(--mut);font-size:.9rem}a{color:var(--acc)}
+@media(max-width:600px){main{padding-inline:13px}.policy-grid{grid-template-columns:1fr}.legacy-grid{grid-template-columns:1fr}}
+[hidden]{display:none!important}
+</style></head><body><main>
 <p><a href="https://ivanivorontsov-sudo.github.io/">← Главный сайт проектов</a></p>
 <h1>Политики конфиденциальности</h1>
-<p class="lead">Здесь собраны опубликованные документы для приложений, программ и веб-инструментов. Откройте нужную страницу, чтобы прочитать, какие данные обрабатываются и какие сторонние сервисы используются.</p>
-<ul class="policy-list">
-<li><a href="privacy.html">СуперСмарт <span>↗</span></a></li>
-<li><a href="tiho.html">Тихо (браузер) <span>↗</span></a></li>
-<li><a href="englishtutor.html">EnglishTutor <span>↗</span></a></li>
-<li><a href="screenlimit.html">ScreenLimit <span>↗</span></a></li>
-<li><a href="nouninstall.html">NoUninstall <span>↗</span></a></li>
-<li><a href="nastavnik.html">Наставник <span>↗</span></a></li>
-<li><a href="reaction-emulator.html">Эмулятор реакции <span>↗</span></a></li>
-<li><a href="edinicy.html">Интерактивный конвертер единиц и валют <span>↗</span></a></li>
-<li><a href="https://ivanivorontsov-sudo.github.io/privacy.html">Главный сайт и визитка (GitHub Pages) <span>↗</span></a></li>
-</ul>
-<div class="note"><strong>Обратите внимание</strong><p>Политики относятся к указанным продуктам и их собственным функциям. GitHub Pages, магазины приложений, почтовые сервисы и внешние API могут самостоятельно обрабатывать технические данные по своим условиям. Подробности для сайта конвертера единиц и валют приведены в отдельном документе.</p></div>
+<p class="lead">Каталог документов для опубликованных приложений, программ, игр и веб-инструментов. Включены все 64 проекта главного каталога и отдельные продукты с ранее опубликованными политиками.</p>
+<div class="notice"><strong>Важно о полноте сведений</strong><p>Документы описывают поведение по доступной документации проектов. Там, где технические детали не опубликованы, это прямо отмечено: отсутствие сведений не означает, что приложение офлайн или не обрабатывает данные. Разрешения и сетевые функции могут отличаться между версиями. Для внешних API, хостинга, почты и AI-провайдеров действуют также их собственные политики.</p></div>
+<h2>Все продукты главного каталога</h2>
+<p class="muted">Найдено проектов: 64. Показано: <span id="count">64</span>.</p>
+<input class="search" id="search" type="search" placeholder="Поиск по названию или репозиторию…" aria-label="Поиск по продуктам">
+<div class="filters" role="group" aria-label="Категории">
+<button type="button" data-filter="all" aria-pressed="true">Все</button>
+<button type="button" data-filter="android" aria-pressed="false">Android</button>
+<button type="button" data-filter="win" aria-pressed="false">Windows</button>
+<button type="button" data-filter="web" aria-pressed="false">Веб</button>
+<button type="button" data-filter="game" aria-pressed="false">Игры</button>
+<button type="button" data-filter="misc" aria-pressed="false">Разное</button>
+</div>
+<div class="policy-grid" id="products"><a class="policy-card" data-cat="game" data-search="atari 2600 — шутер atari-kibalchish" href="products.html#atari-kibalchish"><strong>Atari 2600 — шутер</strong><span>Игры · Политика ↗</span></a>
+<a class="policy-card" data-cat="game" data-search="sega mega drive — шашки batrachomyomachia-md" href="products.html#batrachomyomachia-md"><strong>Sega Mega Drive — шашки</strong><span>Игры · Политика ↗</span></a>
+<a class="policy-card" data-cat="android" data-search="отучение otuchenie" href="products.html#otuchenie"><strong>Отучение</strong><span>Android · Политика ↗</span></a>
+<a class="policy-card" data-cat="android" data-search="androidbluetoothmanager androidbluetoothmanager" href="products.html#androidbluetoothmanager"><strong>AndroidBluetoothManager</strong><span>Android · Политика ↗</span></a>
+<a class="policy-card" data-cat="win" data-search="antiraskladka antiraskladka" href="products.html#antiraskladka"><strong>antiraskladka</strong><span>Windows · Политика ↗</span></a>
+<a class="policy-card" data-cat="android" data-search="bank-otkrytok bank-otkrytok" href="products.html#bank-otkrytok"><strong>bank-otkrytok</strong><span>Android · Политика ↗</span></a>
+<a class="policy-card" data-cat="android" data-search="boec-ponevole boec-ponevole" href="products.html#boec-ponevole"><strong>boec-ponevole</strong><span>Android · Политика ↗</span></a>
+<a class="policy-card" data-cat="win" data-search="bystryj-skrin bystryj-skrin" href="products.html#bystryj-skrin"><strong>bystryj-skrin</strong><span>Windows · Политика ↗</span></a>
+<a class="policy-card" data-cat="game" data-search="car-simulator car-simulator" href="products.html#car-simulator"><strong>car-simulator</strong><span>Игры · Политика ↗</span></a>
+<a class="policy-card" data-cat="game" data-search="car-simulator-android car-simulator-android" href="products.html#car-simulator-android"><strong>car-simulator-android</strong><span>Игры · Политика ↗</span></a>
+<a class="policy-card" data-cat="misc" data-search="currency-converter currency-converter" href="products.html#currency-converter"><strong>currency-converter</strong><span>Разное · Политика ↗</span></a>
+<a class="policy-card" data-cat="android" data-search="debtsavings debtsavings" href="products.html#debtsavings"><strong>DebtSavings</strong><span>Android · Политика ↗</span></a>
+<a class="policy-card" data-cat="android" data-search="droidvault droidvault" href="products.html#droidvault"><strong>DroidVault</strong><span>Android · Политика ↗</span></a>
+<a class="policy-card" data-cat="web" data-search="edinicy edinicy" href="edinicy.html"><strong>edinicy</strong><span>Веб · Политика ↗</span></a>
+<a class="policy-card" data-cat="android" data-search="fotomaster fotomaster" href="products.html#fotomaster"><strong>fotomaster</strong><span>Android · Политика ↗</span></a>
+<a class="policy-card" data-cat="web" data-search="golosovoj-vvod golosovoj-vvod" href="products.html#golosovoj-vvod"><strong>golosovoj-vvod</strong><span>Веб · Политика ↗</span></a>
+<a class="policy-card" data-cat="misc" data-search="healthplan healthplan" href="products.html#healthplan"><strong>HealthPlan</strong><span>Разное · Политика ↗</span></a>
+<a class="policy-card" data-cat="android" data-search="ii-muzej ii-muzej" href="products.html#ii-muzej"><strong>ii-muzej</strong><span>Android · Политика ↗</span></a>
+<a class="policy-card" data-cat="win" data-search="iskra-launcher iskra-launcher" href="products.html#iskra-launcher"><strong>iskra-launcher</strong><span>Windows · Политика ↗</span></a>
+<a class="policy-card" data-cat="misc" data-search="ivan-mozg ivan-mozg" href="products.html#ivan-mozg"><strong>ivan-mozg</strong><span>Разное · Политика ↗</span></a>
+<a class="policy-card" data-cat="misc" data-search="ivan-operator-app ivan-operator-app" href="products.html#ivan-operator-app"><strong>ivan-operator-app</strong><span>Разное · Политика ↗</span></a>
+<a class="policy-card" data-cat="win" data-search="ivankod ivankod" href="products.html#ivankod"><strong>ivankod</strong><span>Windows · Политика ↗</span></a>
+<a class="policy-card" data-cat="game" data-search="ivrunner ivrunner" href="products.html#ivrunner"><strong>ivrunner</strong><span>Игры · Политика ↗</span></a>
+<a class="policy-card" data-cat="misc" data-search="klaviatura klaviatura" href="products.html#klaviatura"><strong>klaviatura</strong><span>Разное · Политика ↗</span></a>
+<a class="policy-card" data-cat="android" data-search="kodeks-zhizni kodeks-zhizni" href="products.html#kodeks-zhizni"><strong>kodeks-zhizni</strong><span>Android · Политика ↗</span></a>
+<a class="policy-card" data-cat="android" data-search="konspekt-apk konspekt-apk" href="products.html#konspekt-apk"><strong>konspekt-apk</strong><span>Android · Политика ↗</span></a>
+<a class="policy-card" data-cat="android" data-search="krasivyj-launcher krasivyj-launcher" href="products.html#krasivyj-launcher"><strong>krasivyj-launcher</strong><span>Android · Политика ↗</span></a>
+<a class="policy-card" data-cat="android" data-search="lokalnaya-vikipediya lokalnaya-vikipediya" href="products.html#lokalnaya-vikipediya"><strong>lokalnaya-vikipediya</strong><span>Android · Политика ↗</span></a>
+<a class="policy-card" data-cat="misc" data-search="mashinny mashinny" href="products.html#mashinny"><strong>mashinny</strong><span>Разное · Политика ↗</span></a>
+<a class="policy-card" data-cat="android" data-search="mini-ai mini-ai" href="products.html#mini-ai"><strong>mini-ai</strong><span>Android · Политика ↗</span></a>
+<a class="policy-card" data-cat="misc" data-search="napominaniya napominaniya" href="products.html#napominaniya"><strong>napominaniya</strong><span>Разное · Политика ↗</span></a>
+<a class="policy-card" data-cat="android" data-search="nastavnik nastavnik" href="nastavnik.html"><strong>nastavnik</strong><span>Android · Политика ↗</span></a>
+<a class="policy-card" data-cat="android" data-search="nightunlockemailalert nightunlockemailalert" href="products.html#nightunlockemailalert"><strong>NightUnlockEmailAlert</strong><span>Android · Политика ↗</span></a>
+<a class="policy-card" data-cat="android" data-search="notesapp notesapp" href="products.html#notesapp"><strong>NotesApp</strong><span>Android · Политика ↗</span></a>
+<a class="policy-card" data-cat="misc" data-search="peredatchik peredatchik" href="products.html#peredatchik"><strong>peredatchik</strong><span>Разное · Политика ↗</span></a>
+<a class="policy-card" data-cat="win" data-search="podsvetka-myshi podsvetka-myshi" href="products.html#podsvetka-myshi"><strong>podsvetka-myshi</strong><span>Windows · Политика ↗</span></a>
+<a class="policy-card" data-cat="win" data-search="ponyatny ponyatny" href="products.html#ponyatny"><strong>ponyatny</strong><span>Windows · Политика ↗</span></a>
+<a class="policy-card" data-cat="android" data-search="posobiya posobiya" href="products.html#posobiya"><strong>posobiya</strong><span>Android · Политика ↗</span></a>
+<a class="policy-card" data-cat="win" data-search="pulpit-os pulpit-os" href="products.html#pulpit-os"><strong>pulpit-os</strong><span>Windows · Политика ↗</span></a>
+<a class="policy-card" data-cat="misc" data-search="razdelitel razdelitel" href="products.html#razdelitel"><strong>razdelitel</strong><span>Разное · Политика ↗</span></a>
+<a class="policy-card" data-cat="win" data-search="rus-tutor-public rus-tutor-public" href="products.html#rus-tutor-public"><strong>rus-tutor-public</strong><span>Windows · Политика ↗</span></a>
+<a class="policy-card" data-cat="web" data-search="sait-konstruktor sait-konstruktor" href="products.html#sait-konstruktor"><strong>sait-konstruktor</strong><span>Веб · Политика ↗</span></a>
+<a class="policy-card" data-cat="win" data-search="sajt-blokirovshchik sajt-blokirovshchik" href="products.html#sajt-blokirovshchik"><strong>sajt-blokirovshchik</strong><span>Windows · Политика ↗</span></a>
+<a class="policy-card" data-cat="misc" data-search="screen-helper screen-helper" href="products.html#screen-helper"><strong>screen-helper</strong><span>Разное · Политика ↗</span></a>
+<a class="policy-card" data-cat="android" data-search="screenlimit screenlimit" href="screenlimit.html"><strong>ScreenLimit</strong><span>Android · Политика ↗</span></a>
+<a class="policy-card" data-cat="win" data-search="simplenotes simplenotes" href="products.html#simplenotes"><strong>SimpleNotes</strong><span>Windows · Политика ↗</span></a>
+<a class="policy-card" data-cat="android" data-search="sklejka-fajlov sklejka-fajlov" href="products.html#sklejka-fajlov"><strong>sklejka-fajlov</strong><span>Android · Политика ↗</span></a>
+<a class="policy-card" data-cat="game" data-search="sozvezdie sozvezdie" href="products.html#sozvezdie"><strong>sozvezdie</strong><span>Игры · Политика ↗</span></a>
+<a class="policy-card" data-cat="misc" data-search="stavilka stavilka" href="products.html#stavilka"><strong>stavilka</strong><span>Разное · Политика ↗</span></a>
+<a class="policy-card" data-cat="android" data-search="stroka-ide stroka-ide" href="products.html#stroka-ide"><strong>stroka-ide</strong><span>Android · Политика ↗</span></a>
+<a class="policy-card" data-cat="misc" data-search="sudno-proekt sudno-proekt" href="products.html#sudno-proekt"><strong>sudno-proekt</strong><span>Разное · Политика ↗</span></a>
+<a class="policy-card" data-cat="win" data-search="super-ext super-ext" href="products.html#super-ext"><strong>super-ext</strong><span>Windows · Политика ↗</span></a>
+<a class="policy-card" data-cat="web" data-search="super-ext-pro super-ext-pro" href="products.html#super-ext-pro"><strong>super-ext-pro</strong><span>Веб · Политика ↗</span></a>
+<a class="policy-card" data-cat="misc" data-search="supersmart-privacy supersmart-privacy" href="products.html#supersmart-privacy"><strong>supersmart-privacy</strong><span>Разное · Политика ↗</span></a>
+<a class="policy-card" data-cat="win" data-search="svajp-klaviatura svajp-klaviatura" href="products.html#svajp-klaviatura"><strong>svajp-klaviatura</strong><span>Windows · Политика ↗</span></a>
+<a class="policy-card" data-cat="android" data-search="tiho-browser tiho-browser" href="tiho.html"><strong>tiho-browser</strong><span>Android · Политика ↗</span></a>
+<a class="policy-card" data-cat="web" data-search="tiho-updates tiho-updates" href="products.html#tiho-updates"><strong>tiho-updates</strong><span>Веб · Политика ↗</span></a>
+<a class="policy-card" data-cat="misc" data-search="tirproc tirproc" href="products.html#tirproc"><strong>tirproc</strong><span>Разное · Политика ↗</span></a>
+<a class="policy-card" data-cat="web" data-search="tools-portal tools-portal" href="products.html#tools-portal"><strong>tools-portal</strong><span>Веб · Политика ↗</span></a>
+<a class="policy-card" data-cat="win" data-search="uchitel-ii uchitel-ii" href="products.html#uchitel-ii"><strong>uchitel-ii</strong><span>Windows · Политика ↗</span></a>
+<a class="policy-card" data-cat="misc" data-search="video-translator video-translator" href="products.html#video-translator"><strong>video-translator</strong><span>Разное · Политика ↗</span></a>
+<a class="policy-card" data-cat="web" data-search="vizitka vizitka" href="products.html#vizitka"><strong>vizitka</strong><span>Веб · Политика ↗</span></a>
+<a class="policy-card" data-cat="android" data-search="yur-shpargalka yur-shpargalka" href="products.html#yur-shpargalka"><strong>yur-shpargalka</strong><span>Android · Политика ↗</span></a>
+<a class="policy-card" data-cat="misc" data-search="yur-shpargalka-data yur-shpargalka-data" href="products.html#yur-shpargalka-data"><strong>yur-shpargalka-data</strong><span>Разное · Политика ↗</span></a></div>
+<p id="empty" class="muted" hidden>Ничего не найдено.</p>
+<h2>Отдельные политики других опубликованных продуктов</h2>
+<div class="legacy-grid"><a class="legacy-card" href="privacy.html">СуперСмарт ↗</a>
+<a class="legacy-card" href="tiho.html">Тихо (браузер) ↗</a>
+<a class="legacy-card" href="englishtutor.html">EnglishTutor ↗</a>
+<a class="legacy-card" href="screenlimit.html">ScreenLimit ↗</a>
+<a class="legacy-card" href="nouninstall.html">NoUninstall ↗</a>
+<a class="legacy-card" href="nastavnik.html">Наставник ↗</a>
+<a class="legacy-card" href="reaction-emulator.html">Эмулятор реакции ↗</a></div>
+<div class="notice"><strong>Политика самого сайта</strong><p><a href="https://ivanivorontsov-sudo.github.io/privacy.html">Главный сайт и GitHub Pages — политика конфиденциальности</a>.</p></div>
 <footer><p><a href="https://ivanivorontsov-sudo.github.io/vizitka/">Об авторе</a> · <a href="https://github.com/ivanivorontsov-sudo">GitHub</a></p><p>© 2026 Иван Воронцов.</p></footer>
-</main></body></html>
+</main><script>
+const q=document.getElementById("search"),items=[...document.querySelectorAll(".policy-card")],filters=[...document.querySelectorAll("[data-filter]")];let category="all";
+function apply(){const s=q.value.trim().toLocaleLowerCase("ru");let n=0;items.forEach(e=>{const ok=(category==="all"||e.dataset.cat===category)&&e.dataset.search.includes(s);e.hidden=!ok;if(ok)n++;});document.getElementById("count").textContent=n;document.getElementById("empty").hidden=n!==0;}
+q.addEventListener("input",apply);filters.forEach(b=>b.addEventListener("click",()=>{category=b.dataset.filter;filters.forEach(x=>x.setAttribute("aria-pressed",String(x===b)));apply();}));
+</script></body></html>
