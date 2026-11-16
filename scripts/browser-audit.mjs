@@ -32,8 +32,12 @@ await page.locator("#search").fill("krasivyj-launcher");
 if(await entries.filter({visible:true}).count()!==1)errors.push("products.html: policy search does not isolate krasivyj-launcher");
 await page.locator("#search").fill("");
 await page.setViewportSize({width:390,height:844});
-const mobile=await page.evaluate(()=>({client:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth}));
-if(mobile.scroll>mobile.client+2)errors.push("products.html: horizontal overflow at 390px");
+const mobile=await page.evaluate(()=>({
+  client:document.documentElement.clientWidth,
+  scroll:document.documentElement.scrollWidth,
+  offenders:[...document.querySelectorAll("body *")].map(el=>({tag:el.tagName,id:el.id,cls:typeof el.className==="string"?el.className:"",width:Math.round(el.getBoundingClientRect().width),right:Math.round(el.getBoundingClientRect().right),text:(el.textContent||"").trim().slice(0,100)})).filter(x=>x.right>document.documentElement.clientWidth+2).slice(0,15)
+}));
+if(mobile.scroll>mobile.client+2)errors.push("products.html: horizontal overflow at 390px; offenders="+JSON.stringify(mobile.offenders));
 await browser.close();
 console.log("Privacy catalog browser audit: "+files.length+" pages, 71 policy entries, JSON-LD, IDs, links, search and mobile.");
 console.log("Errors: "+errors.length);
