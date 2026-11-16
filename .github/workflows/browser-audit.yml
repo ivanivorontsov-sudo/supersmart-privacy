@@ -4,12 +4,16 @@ on:
   push:
     branches: [main]
     paths:
+      - "assets/site-support.css"
+      - "assets/site-support.js"
       - "*.html"
       - "scripts/**"
       - ".github/workflows/browser-audit.yml"
   pull_request:
     branches: [main]
     paths:
+      - "assets/site-support.css"
+      - "assets/site-support.js"
       - "*.html"
       - "scripts/**"
       - ".github/workflows/browser-audit.yml"
