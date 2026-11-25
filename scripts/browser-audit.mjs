@@ -16,7 +16,7 @@ for(const file of files){
    const json=[...document.querySelectorAll('script[type="application/ld+json"]')].map(x=>x.textContent);
    const badJson=[];
    for(const s of json){try{JSON.parse(s)}catch(e){badJson.push(e.message)}}
-   return {title:document.title,h1:document.querySelectorAll("h1").length,duplicateIds:ids.filter((id,i)=>ids.indexOf(id)!==i),badJson,externalBlank:[...document.querySelectorAll('a[target="_blank"]')].filter(a=>!/(^|\\s)noopener(\\s|$)/.test(a.rel)).length};
+   return {title:document.title,h1:document.querySelectorAll("h1").length,duplicateIds:ids.filter((id,i)=>ids.indexOf(id)!==i),badJson,externalBlank:[...document.querySelectorAll('a[target="_blank"]')].filter(a=>!a.rel.split(/\s+/).some(token=>token.toLowerCase()==="noopener")).length};
   });
   if(!metadata.title.trim())errors.push(file+": empty title");
   if(metadata.h1!==1)errors.push(file+": expected exactly one H1, got "+metadata.h1);
@@ -27,7 +27,7 @@ for(const file of files){
 }
 await page.goto(BASE+"/products.html",{waitUntil:"domcontentloaded"});
 const entries=page.locator(".policy-entry");
-if(await entries.count()!==71)errors.push("products.html: expected 71 policies, got "+await entries.count());
+if(await entries.count()!==72)errors.push("products.html: expected 71 policies, got "+await entries.count());
 await page.locator("#search").fill("krasivyj-launcher");
 if(await entries.filter({visible:true}).count()!==1)errors.push("products.html: policy search does not isolate krasivyj-launcher");
 await page.locator("#search").fill("");
@@ -39,7 +39,7 @@ const mobile=await page.evaluate(()=>({
 }));
 if(mobile.scroll>mobile.client+2)errors.push("products.html: horizontal overflow at 390px; offenders="+JSON.stringify(mobile.offenders));
 await browser.close();
-console.log("Privacy catalog browser audit: "+files.length+" pages, 71 policy entries, JSON-LD, IDs, links, search and mobile.");
+console.log("Privacy catalog browser audit: "+files.length+" pages, 72 policy entries, JSON-LD, IDs, links, search and mobile.");
 console.log("Errors: "+errors.length);
 for(const error of errors)console.error("ERROR:",error);
 if(errors.length)process.exitCode=1;
